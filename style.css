@@ -1,0 +1,136 @@
+/* || FONT LINK*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+/* || RESETS */
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+img,
+svg{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+/* || VARIABLES */
+
+:root{
+    --BG-COLOR: hsl(185, 75%, 39%);
+    --TEXT-DARK: hsl(229, 23%, 23%);
+    --TEXT-LIGHT: hsl(227, 10%, 46%);
+    --BORDER-COLOR: hsl(0, 0%, 59%, 0.5);
+    --WHITE:#fff;
+}
+
+/* || LAYOUT*/
+body{
+    min-height:100svh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    flex-flow:column wrap;
+    background-color:var(--BG-COLOR);
+    font-family: 'Kumbh Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+body::before{
+    content:"";
+    width:100%;
+    height:100svh;
+    background-image:url(images/bg-pattern-top.svg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position:absolute;
+    top: -40%;
+    left:-50%;
+    transform: rotate(180deg);
+}
+
+body::after{
+    content:"";
+    width:100%;
+    height:100svh;
+    background-image:url(images/bg-pattern-bottom.svg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    position:absolute;
+    bottom:-50%;
+    right:-50%;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:18rem;
+    z-index:50;
+    flex-flow:column wrap;
+    border-radius:0.75rem;
+    background-color:var(--WHITE);
+    overflow:hidden;
+    margin:3rem 1rem;
+    box-shadow: 0 0 3rem 1rem hsla(229, 23%, 23%, 0.3);
+}
+
+
+.container .middle{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    top:-50px;
+    color: var(--TEXT-LIGHT);
+} 
+
+.container .middle img{
+    border-radius:50%;
+    border:5px solid white;
+    margin-block-end:0.8rem;
+}
+
+.container .lower{
+    padding:1rem;
+    width:100%;
+    display:flex;
+    gap:1rem;
+    justify-content:space-evenly;
+    border-top:1px solid var(--BORDER-COLOR);
+}
+
+.container .lower-item{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    color: var(--TEXT-LIGHT);
+    font-size:0.7rem;
+}
+
+.container .middle div{
+    font-size:1.1rem;
+}
+
+.bold{
+    font-weight:700;
+    color: var(--TEXT-DARK);
+    
+}
+
+.container .middle div .bold{
+    font-weight:900;
+}
+
+.container .lower-item .bold{
+    font-size:1.1rem;
+}
+
+.attribution { font-size: 11px; text-align: center; z-index:1; }
+.attribution a { color: hsl(228, 45%, 44%); }
